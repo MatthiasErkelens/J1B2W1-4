@@ -1,3 +1,63 @@
-body {
-	background-image: url("img/Background1.jpg"); 
+div#game-container {
+	margin-top: 0px;
+	width: auto;
+	height: 690px;
+	background-color: 	#D3D3D3;
+	
+
+	/*image display */
+	background-image: url(img/StartScherm.jpg);
+	background-size: 600px 400px;
+	background-repeat: no-repeat;
+	background-position: 300px 100px;
+}
+
+div#description {
+	margin-left: 30px;
+	width: 200px;
+	height: 500px;
+	padding: 5px;
+	border: 3px solid black;
+}
+
+div#game-buttons {
+	position: absolute;
+	right: 350px;
+	bottom: 60px;
+}
+
+h1#title {
+	margin-left: 30px;
+	text-align: center;
+}
+
+button#button3 {
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+img#inventoryItem {
+
+	
+}
+
+img.InvItem1 {
+	position: absolute;
+	width: 20px;
+	right: 465px;
+	bottom: 250px;
+}
+
+img.InvItem2 {
+	position: absolute;
+	right: 120px;
+	bottom: 100px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: not-allowed;
 }
