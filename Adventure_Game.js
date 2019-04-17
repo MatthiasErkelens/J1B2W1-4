@@ -6,8 +6,9 @@ var GameContainer = document.getElementById('game-container');
 var Story = document.getElementById('description');
 var Titel = document.getElementById('title');
 
+GameContainer.style.backgroundImage = 'url(start.jpg)';
 Story.innerHTML = 'Je bent een avond alleen thuis, je zit rustig op de bank en opeens hoor je allemaal geluiden die je nog nooit heb gehoord';
-Titel.innerHTML = ' the Story';
+Titel.innerHTML = ' The Story';
 
 button1.onclick = buttonEen;
 button2.onclick = buttonTwee;
@@ -29,9 +30,9 @@ inventoryItem.style.display = 'none';
 
 function CheckPlaats () {
     button3.style.display = 'none';
-    // Enge Grote huis
+    //  huis
     if (buttonEenClicks == 1 && buttonTweeClicks == 0) {
-        GameContainer.style.backgroundImage = 'url(img/EngHuis.jpg)';
+        GameContainer.style.backgroundImage = 'url(scaryhouse.jpg)';
         Story.innerHTML = 'Je zit op de bank rustig tv te kijken en opeens hoor je allemaal enge geluiden buiten. Je gaat op onderzoek uit..';
         Titel.innerHTML = 'Scarry late night';
         button1.innerHTML = '< Links';
@@ -50,7 +51,8 @@ function CheckPlaats () {
     }
     // Eng Bos, 1 naar links
     else if (buttonEenClicks == 2 && buttonTweeClicks == 0) {
-        GameContainer.style.backgroundImage = 'url(img/EngBosEen.jpg)';
+        GameContainer.style.backgroundImage = 'url(beginbos.jpg)';
+        GameContainer.style.display = "width: 100%;"
         Titel.innerHTML = 'Buiten';
         button1.disabled = false;
         button2.disabled = false;
@@ -60,7 +62,7 @@ function CheckPlaats () {
     }
     // Links Einde Bos
     else if (buttonEenClicks == 3 && buttonTweeClicks == 0) {
-        GameContainer.style.backgroundImage = 'url(img/EngBosTwee.jpg)';
+        GameContainer.style.backgroundImage = 'url(donkerbos.jpg)';
         Titel.innerHTML = 'Donker Bos';
         button1.disabled = true;
         button2.disabled = false;
@@ -68,25 +70,25 @@ function CheckPlaats () {
         Story.innerHTML = 'Ik vind het hier maar eng ik ga zeker niet verder deze kant op.';
         console.log('Level: Enger Bos');
     }
-    // Stapel Auto's met key
+    // open vlakte met key
     else if (buttonTweeClicks == 0 && buttonEenClicks <= 1) {
-        GameContainer.style.backgroundImage = 'url(img/ScaryCars.jpg)';
+        GameContainer.style.backgroundImage = 'url(openvlakte.jpg)';
         Titel.innerHTML = 'Open vlakte';
         button1.disabled = false;
         button2.disabled = false;
         inventoryItem.style.display = 'block';
         Story.innerHTML = 'Hier is ook niks te zien.';
-        console.log('Level: The Car Graveyard');
+        console.log('Level: openvlakte');
     }
-    // Bos met sneeuw, Eindo rechts
+    // donkere plek, Eindo rechts
     else if (buttonTweeClicks == 1 && buttonEenClicks <= 1) {
-        GameContainer.style.backgroundImage = 'url(img/EngBosDrie.jpg)';
+        GameContainer.style.backgroundImage = 'url(openvlakte2.jpg)';
         Titel.innerHTML = 'Open vlakte';
         button1.disabled = false;
         button2.disabled = true;
         inventoryItem.style.display = 'none';
         Story.innerHTML = 'ik moet niet te ver gaan straks weet ik niet meer hoe ik terug moet.';
-        console.log('Level: Bos met sneeuw');
+        console.log('Level: donkere plek');
     }
     else if (buttonEenClicks == 10 && buttonTweeClicks == 8) {
         GameContainer.style.backgroundImage = 'url(img/ScaryGarden.jpg)';
@@ -162,7 +164,7 @@ function BeginOpnieuw () {
 function CheckPlaatsPartTwo () {
     button3.style.display = 'none';
     if (buttonEenClicks2 == 0 && buttonTweeClicks2 == 0) {
-        GameContainer.style.backgroundImage = 'url(img/Hallway.jpg)';
+        GameContainer.style.backgroundImage = 'url(hal.jpg)';
         Titel.innerHTML = 'Hal';
         button1.disabled = false;
         button2.disabled = false;
@@ -171,7 +173,7 @@ function CheckPlaatsPartTwo () {
         console.log('Level: hal');
     }
     else if (buttonEenClicks2 == 1 && buttonTweeClicks2 == 0) {
-        GameContainer.style.backgroundImage = 'url(img/Bedroom.jpg)';
+        GameContainer.style.backgroundImage = 'url(kastkamer.jpg)';
         Titel.innerHTML = 'Slaapkamer';
         button1.disabled = false;
         button2.disabled = false;
@@ -180,7 +182,7 @@ function CheckPlaatsPartTwo () {
             button3.style.display = 'block';
             button3.innerHTML = 'Verstop!';
         }
-        Story.innerHTML = 'hier zie ik ook niks bijzonders.';
+        Story.innerHTML = 'hier zie ik ook niks bijzonders, maar ik kan me goed verstoppen in deze kast.';
         console.log('Level: Slaapkamer');
     }
     else if (buttonEenClicks2 == 2 && buttonTweeClicks2 == 0) {
@@ -193,7 +195,7 @@ function CheckPlaatsPartTwo () {
         console.log('Level: Overloop');
     }
     else if (buttonEenClicks2 == 0 && buttonTweeClicks2 == 1) {
-        GameContainer.style.backgroundImage = 'url(img/Kitchen.jpg)';
+        GameContainer.style.backgroundImage = 'url(badkamer.jpeg)';
         Titel.innerHTML = 'badkamer';
         button1.disabled = false;
         button2.disabled = false;
@@ -202,18 +204,18 @@ function CheckPlaatsPartTwo () {
         console.log('Level: badkamer');
     }
     else if (buttonEenClicks2 == 0 && buttonTweeClicks2 == 2) {
-        GameContainer.style.backgroundImage = 'url(img/LivingRoom.jpg)';
+        GameContainer.style.backgroundImage = 'url(livingRoom.jpg)';
         Titel.innerHTML = 'badkamer';
         button1.disabled = false;
         button2.disabled = true;
         inventoryItem.style.display = 'block';
         inventoryItem.classList.add('InvItem2');
-        Story.innerHTML = 'Ik moet hem uitschakelen.';
+        Story.innerHTML = 'Ik moet me verstoppen en ik heb iets nodig waar onder ik in kan verstoppen.';
         console.log('Level: Woonkamer');
         if (Item == true && buttonEenClicks == 1 && buttonTweeClicks == 0) {
             button3.style.display = 'block';
-            button3.innerHTML = 'Pistool';
-            Story.innerHTML = 'Mooi, ik heb een pistool, ik ga hem uitschakelen.';
+            button3.innerHTML = 'telefoon';
+            Story.innerHTML = 'Mooi, ik heb een telefoon. Nu kan ik de politie bellen';
             console.log('level: Win Screen')
         }
         
@@ -243,7 +245,7 @@ function buttonTwee2 () {
 }
 
 function buttonDrie2 () {
-    GameContainer.style.backgroundImage = 'url(img/win.jpg)';
+    GameContainer.style.backgroundImage = 'url(win.jpg)';
     Titel.innerHTML = 'EINDE';
     button1.disabled = false;
     button2.disabled = false;
@@ -252,7 +254,7 @@ function buttonDrie2 () {
     button1.onclick = BeginOpnieuw;
     inventoryItem.style.display = 'block';
     button3.style.display = 'none';
-    Story.innerHTML = 'Je hebt gewonnen! De dief kan je hier niet vinden!';
+    Story.innerHTML = 'Je hebt gewonnen! De moordenaar kan je hier niet vinden!';
     console.log('Level: Win Screen');
 }
 

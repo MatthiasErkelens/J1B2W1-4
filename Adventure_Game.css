@@ -1,23 +1,24 @@
 div#game-container {
-	margin-top: 0px;
+	padding: 0px;
 	width: auto;
-	height: 690px;
+	height: 700px;
 	background-color: 	#D3D3D3;
 	
 
 	/*image display */
 	background-image: url(img/StartScherm.jpg);
-	background-size: 600px 400px;
+	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: 300px 100px;
+	background-position: auto;
 }
 
 div#description {
-	margin-left: 30px;
-	width: 200px;
-	height: 500px;
+	margin-left: 500px;
+	width: 500px;
+	height: 50px;
 	padding: 5px;
 	border: 3px solid black;
+	color: white;
 }
 
 div#game-buttons {
@@ -29,6 +30,7 @@ div#game-buttons {
 h1#title {
 	margin-left: 30px;
 	text-align: center;
+	color: white;
 }
 
 button#button3 {
@@ -43,7 +45,7 @@ img#inventoryItem {
 
 img.InvItem1 {
 	position: absolute;
-	width: 20px;
+	width: 40px;
 	right: 465px;
 	bottom: 250px;
 }
@@ -60,4 +62,11 @@ button:hover {
 
 button:disabled {
 	cursor: not-allowed;
+}
+
+ #GameContainer{
+	width:1000px;
+}
+.a{
+	witd
 }
